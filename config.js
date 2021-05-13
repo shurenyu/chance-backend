@@ -1,7 +1,7 @@
 'use strict';
 
 const app = {
-    publicUrl: 'http://127.0.0.1:3000',
+    publicUrl: 'http://127.0.0.1:5000',
     stripeSecretKey: 'sk_test_sHMVRkkGop1ciYEYhJ3GOC4a',
     braintree: {
         merchantId: 'nqqftmb3d2msqqvc',
