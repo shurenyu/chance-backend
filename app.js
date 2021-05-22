@@ -24,7 +24,7 @@ admin.initializeApp({
 const mongoUser = 'admin';
 const mongoPw = '63e4S9BpbpxH5z9';
 // const url = `mongodb://${mongoUser}:${mongoPw}@localhost:27017/rlux`;
-const url = `mongodb://localhost/rlux`;
+const url = `mongodb://localhost/chance`;
 mongoose.connect(url, { useNewUrlParser: true })
     .then(() => {
         console.log('Connected to MongoDB.');
