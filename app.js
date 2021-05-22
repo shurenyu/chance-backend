@@ -41,8 +41,8 @@ app.use('/api/', bodyParser.json(), payment);
 
 const serverHttp = http.createServer(app);
 
-serverHttp.listen(5000, function () {
-    console.log('HTTP server running at http://localhost:5000/');
+serverHttp.listen(3000, function () {
+    console.log('HTTP server running at http://localhost:3000/');
 });
 
 // TEST
