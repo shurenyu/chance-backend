@@ -47,68 +47,68 @@ serverHttp.listen(3000, function () {
 
 // TEST
 
-// const raffleOne = new Raffle({
-//     title: 'NIKE',
-//     subtitle: 'Lunar Force 1 x Acronym',
-//     description: 'Errolson Hugh’s connection to the Air Force 1 runs deep. Having worked on the Bruce Kilgore design in past collaborative projects, Hugh’s love for the 1 is true, understanding what it takes to maximize everyday benefits In the design. Staying true to the white-on-white while ensuring his product is beneficial, Errolson’s new AF-1 Low harkens back to his first-ever collaborative design. A side-zip allows for easy on-and-off without ever untying your laces, while the premium leather upper arrives in the unmistakable white-on-white finish.',
-//     availableSizes: ['UK4', 'UK5', 'UK6'],
-//     pictureUrl: '/static/raffles/sample_shoe.png',
-//     startedAt: Date.now(),
-//     status: 'Starting',
-//     ticketPrice: 0.99,
-//     minParticipants: 5,
-//     duration: 24,
-//     question: {
-//         questionLine: 'How much is 5+5?',
-//           answers: [
-//               '3',
-//               '19',
-//               '10'
-//           ],
-//           correctAnswerIndex: 2
-//     }
-// });
+const raffleOne = new Raffle({
+    title: 'NIKE',
+    subtitle: 'Lunar Force 1 x Acronym',
+    description: 'Errolson Hugh’s connection to the Air Force 1 runs deep. Having worked on the Bruce Kilgore design in past collaborative projects, Hugh’s love for the 1 is true, understanding what it takes to maximize everyday benefits In the design. Staying true to the white-on-white while ensuring his product is beneficial, Errolson’s new AF-1 Low harkens back to his first-ever collaborative design. A side-zip allows for easy on-and-off without ever untying your laces, while the premium leather upper arrives in the unmistakable white-on-white finish.',
+    availableSizes: ['UK4', 'UK5', 'UK6'],
+    pictureUrl: '/static/raffles/sample_shoe.png',
+    startedAt: Date.now(),
+    status: 'Starting',
+    ticketPrice: 0.99,
+    minParticipants: 5,
+    duration: 24,
+    question: {
+        questionLine: 'How much is 5+5?',
+          answers: [
+              '3',
+              '19',
+              '10'
+          ],
+          correctAnswerIndex: 2
+    }
+});
 
-// const raffleTwo = new Raffle({
-//     title: 'CONVERSE',
-//     subtitle: 'Custom Chuck 70',
-//     description: 'Errolson Hugh’s connection to the Air Force 1 runs deep. Having worked on the Bruce Kilgore design in past collaborative projects, Hugh’s love for the 1 is true, understanding what it takes to maximize everyday benefits In the design. Staying true to the white-on-white while ensuring his product is beneficial, Errolson’s new AF-1 Low harkens back to his first-ever collaborative design. A side-zip allows for easy on-and-off without ever untying your laces, while the premium leather upper arrives in the unmistakable white-on-white finish.',
-//     availableSizes: ['UK4', 'UK5', 'UK6'],
-//     pictureUrl: '/static/raffles/sample_shoe_3.png',
-//     status: 'Starting',
-//     ticketPrice: 2.25,
-//     minParticipants: 10,
-//     duration: 24,
-//     question: {
-//         questionLine: 'Are dolphins fish or mammals?',
-//           answers: [
-//               'Fish',
-//               'Mammals'
-//           ],
-//           correctAnswerIndex: 1
-//     }
-// });
+const raffleTwo = new Raffle({
+    title: 'CONVERSE',
+    subtitle: 'Custom Chuck 70',
+    description: 'Errolson Hugh’s connection to the Air Force 1 runs deep. Having worked on the Bruce Kilgore design in past collaborative projects, Hugh’s love for the 1 is true, understanding what it takes to maximize everyday benefits In the design. Staying true to the white-on-white while ensuring his product is beneficial, Errolson’s new AF-1 Low harkens back to his first-ever collaborative design. A side-zip allows for easy on-and-off without ever untying your laces, while the premium leather upper arrives in the unmistakable white-on-white finish.',
+    availableSizes: ['UK4', 'UK5', 'UK6'],
+    pictureUrl: '/static/raffles/sample_shoe_3.png',
+    status: 'Starting',
+    ticketPrice: 2.25,
+    minParticipants: 10,
+    duration: 24,
+    question: {
+        questionLine: 'Are dolphins fish or mammals?',
+          answers: [
+              'Fish',
+              'Mammals'
+          ],
+          correctAnswerIndex: 1
+    }
+});
 
-// const raffleThree = new Raffle({
-//     title: 'CONVERSE',
-//     subtitle: 'One Star Suede',
-//     description: 'Errolson Hugh’s connection to the Air Force 1 runs deep. Having worked on the Bruce Kilgore design in past collaborative projects, Hugh’s love for the 1 is true, understanding what it takes to maximize everyday benefits In the design. Staying true to the white-on-white while ensuring his product is beneficial, Errolson’s new AF-1 Low harkens back to his first-ever collaborative design. A side-zip allows for easy on-and-off without ever untying your laces, while the premium leather upper arrives in the unmistakable white-on-white finish.',
-//     availableSizes: ['UK4', 'UK5', 'UK6'],
-//     pictureUrl: '/static/raffles/sample_shoe_2.png',
-//     ticketPrice: 1.75,
-//     status: 'Starting',
-//     minParticipants: 5,
-//     duration: 24,
-//     question: {
-//         questionLine: 'Is blue a warm or a cold color?',
-//           answers: [
-//               'WARM',
-//               'COLD'
-//           ],
-//           correctAnswerIndex: 1
-//     }
-// });
+const raffleThree = new Raffle({
+    title: 'CONVERSE',
+    subtitle: 'One Star Suede',
+    description: 'Errolson Hugh’s connection to the Air Force 1 runs deep. Having worked on the Bruce Kilgore design in past collaborative projects, Hugh’s love for the 1 is true, understanding what it takes to maximize everyday benefits In the design. Staying true to the white-on-white while ensuring his product is beneficial, Errolson’s new AF-1 Low harkens back to his first-ever collaborative design. A side-zip allows for easy on-and-off without ever untying your laces, while the premium leather upper arrives in the unmistakable white-on-white finish.',
+    availableSizes: ['UK4', 'UK5', 'UK6'],
+    pictureUrl: '/static/raffles/sample_shoe_2.png',
+    ticketPrice: 1.75,
+    status: 'Starting',
+    minParticipants: 5,
+    duration: 24,
+    question: {
+        questionLine: 'Is blue a warm or a cold color?',
+          answers: [
+              'WARM',
+              'COLD'
+          ],
+          correctAnswerIndex: 1
+    }
+});
 
-// raffleOne.save();
-// raffleTwo.save();
-// raffleThree.save();
+raffleOne.save();
+raffleTwo.save();
+raffleThree.save();
