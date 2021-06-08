@@ -7,6 +7,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  fcm_token: {
+    type: String
+  },
   email: {
     type: String,
     required: true
@@ -14,6 +17,10 @@ const userSchema = new mongoose.Schema({
   isFacebookUser: {
     type: Boolean,
     required: true
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
   },
   name: {
     first: {

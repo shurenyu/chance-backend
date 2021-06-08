@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Payment Form</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body scroll="no" style="overflow: hidden">
+    <div class="content">
+        <div class="header">
+            <h2 align="center">Complete Purchase</h2>
+        </div>
+        <div class="col-25">
+            <div class="container">
+                <div class="Rowe">
+                    <div class="Columne" id="leftColumn"><img class="responsiveImg"
+                            src="https://rluxappservices.com/api<%= imgSrc%>"></div>
+                    <div class="Columne" id="rightColumn">
+                        <div>
+                            <b>
+                                <%= raffleName%> Tickets</b>
+                        </div>
+                        <div>
+                            <%= ticketCount%> Tickets
+                        </div>
+                    </div>
+                </div>
+                <form class="form" id="form" action="/api/payment/create-payment" method="post">
+                    <input type="hidden" value="<%=paymentId%>" name="paymentId" />
+                </form>
+            </div>
+            <hr style="opacity: .25; margin-top:15px">
+            <div class="container">
+                <div style="float: right;"> <b>Total:</b>
+                    £
+                    <%= cost%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" form="form" value="Submit" class="block">Pay with Paypal</button>
+</body>
+
+</html>

@@ -65,6 +65,12 @@ router.post('/edit', auth, upload.single('avatar'),
                 user.shipping_details.phone_number = req.body.phone_number;
             }
 
+            if (req.body.fcmToken) {
+                user.fcm_token = req.body.fcmToken;
+            }
+
+            console.log('BODY:', req.body);
+
             await user.save();
 
             user.profile_picture_uri = user.getProfilePictureUri();

@@ -5,8 +5,8 @@ const config = require('../config');
 const raffleSchema = new mongoose.Schema({
     status: {
         type: String,
-        enum: ['Starting', 'Ongoing', 'Ended'],
-        default: 'Starting'
+        enum: ['Scheduled', 'Starting', 'Ongoing', 'Ended'],
+        default: 'Scheduled'
     },
     title: {
         type: String,
@@ -24,8 +24,8 @@ const raffleSchema = new mongoose.Schema({
         type: [String],
         required: true
     },
-    pictureUrl: {
-        type: String,
+    pictures: {
+        type: [String],
         required: true
     },
     ticketPrice: {
@@ -34,6 +34,10 @@ const raffleSchema = new mongoose.Schema({
     },
     minParticipants: {
         type: Number,
+        required: true
+    },
+    startDate: {
+        type: Date,
         required: true
     },
     question: {
@@ -72,8 +76,16 @@ const raffleSchema = new mongoose.Schema({
     }
 });
 
-raffleSchema.methods.getThumbnail = function () {
-    return config.app.publicUrl + '/api' + this.pictureUrl;
+raffleSchema.methods.getThumbnails = function () {
+    let images = [];
+
+    for (let index = 0; index < this.pictures.length; index++) {
+        let image = this.pictures[index];
+        image = config.app.publicUrl + '/api' + image;
+        images.push(image);
+    }
+
+    return images;
 };
 
 raffleSchema.methods.getParticipants = function () {

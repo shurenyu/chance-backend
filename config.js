@@ -1,17 +1,22 @@
 'use strict';
 
 const app = {
+    serverVersion: 1.2,
     publicUrl: 'http://3.131.42.170:3000',
     stripeSecretKey: 'sk_test_sHMVRkkGop1ciYEYhJ3GOC4a',
+    paypal: {
+        clientId: 'AVChMS8BvW2LLgwSdTkXIFgGqDkN6d5Lba6of7VvJBvKC-Imf41oq4M5JewrslwetXn19jYUYlSp0TMT',
+        secret: 'EFMZ-fVPMnEnjvZlQdv7ptXgss3KAuDfuArm9H7GzaEDyq7nNnSUsKvrayFcF_labhzA9mtkelKXfiHr'
+    },
     braintree: {
         merchantId: 'nqqftmb3d2msqqvc',
         publicKey: '8q55tgwpbgg7999f',
         privateKey: '05401c1bca4c56f3cea691015c8ef800'
     },
     mailgun: {
-        apiKey: 'c5383082ea3175846dfd0b8c0866ca6b-c8e745ec-9d65ac89',
-        domain: 'sandboxcab7c252eef946c4b1a60a950233df6d.mailgun.org',
-        from: 'RLUX Sandbox <postmaster@sandboxcab7c252eef946c4b1a60a950233df6d.mailgun.org>'
+        apiKey: 'f42ebc4b0ca9fdc79399e00aba3f8bef-2d27312c-485695af',
+        domain: 'mg.rlux.uk',
+        from: 'info@rlux.uk'
     }
 };
 
