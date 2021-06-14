@@ -24,7 +24,7 @@ paypal.configure({
 
 // Get purchase information from client and create a payment object
 router.post('/purchase', auth, async (req, res) => {
-
+    /*
     let raffle = await Raffle.findOne({ _id: req.body.raffleId });
 
     var payment = {
@@ -42,6 +42,28 @@ router.post('/purchase', auth, async (req, res) => {
     payments.push(payment);
 
     res.status(200).json({ success: true, payment });
+    */
+   let user = await User.findOne({ uid: req.user.uid });
+   const tickets = [];
+   for (let index = 0; index < req.body.ticketCount; index++) {
+       tickets.push(user._id);       
+   }
+
+   Raffle.findOneAndUpdate(
+       { _id: req.body.raffleId },
+       { $push: {tickets: { $each: tickets }}},
+       { new: true },
+       function ( error, doc ) {
+           if (error ) {
+            console.log(error);
+            res.status(400).json({ success: false, error });
+           }
+           else {
+            res.status(200).json({ success: true });
+           }           
+       }
+    )
+
 });
 
 router.get('/payment/:id', (req, res) => {
