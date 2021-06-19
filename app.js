@@ -22,10 +22,10 @@ admin.initializeApp({
 });
 
 // Connect to DB
-const mongoUser = 'admin';
-const mongoPw = '63e4S9BpbpxH5z9';
-//const url = `mongodb://${mongoUser}:${mongoPw}@localhost:27017/rlux`;
-const url = `mongodb://localhost:27017/chance`;
+const mongoUser = 'chance';
+const mongoPw = 'chance#2021!';
+const url = `mongodb://${mongoUser}:${mongoPw}@localhost:27017/chance`;
+//const url = `mongodb://localhost:27017/chance`;
 mongoose.connect(url, { useNewUrlParser: true })
     .then(() => {
         console.log('Connected to MongoDB.');
